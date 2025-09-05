@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salomon podcast de creador de contenido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(120deg, #f5f6fa 0%, #e5e9f2 100%);
+            --card-bg: rgba(255,255,255,0.92);
+            --primary: #222;
+            --secondary: #555;
+            --accent: #e5e9f2;
+            --radius-lg: 24px;
+            --radius-md: 18px;
+            --shadow-lg: 0 8px 32px rgba(60,60,60,0.10);
+            --shadow-md: 0 2px 12px rgba(60,60,60,0.08);
+            --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            background: var(--bg-gradient);
+            font-family: var(--font-main);
+            color: var(--primary);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .mac-wrapper {
+            max-width: 900px;
+            width: 100%;
+            margin: 48px auto;
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 40px 40px 48px 40px;
+        }
+        .mac-header {
+            text-align: center;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--accent);
+            margin-bottom: 32px;
+        }
+        .mac-header h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .mac-header h2 {
+            font-size: 1.18rem;
+            font-weight: 400;
+            color: var(--secondary);
+            margin-bottom: 0;
+        }
+        .mac-intro {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .mac-intro p {
+            font-size: 1.08rem;
+            color: var(--secondary);
+            margin-bottom: 18px;
+        }
+        .mac-intro audio {
+            width: 320px;
+            max-width: 90vw;
+            margin: 0 auto;
+            display: block;
+            border-radius: 12px;
+            background: #f5f6fa;
+            box-shadow: var(--shadow-md);
+        }
+        .mac-videos {
+            margin-top: 24px;
+        }
+        .mac-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+        .mac-item {
+            background: linear-gradient(120deg, #f8fafc 80%, #e5e9f2 100%);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            padding: 18px 14px 14px 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.18s, transform 0.18s;
+        }
+        .mac-item:hover {
+            box-shadow: 0 8px 32px rgba(60,60,60,0.13);
+            transform: translateY(-4px) scale(1.02);
+        }
+        .mac-title {
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 0.7px;
+        }
+        .mac-item iframe {
+            width: 100%;
+            height: 220px;
+            border-radius: 12px;
+            border: none;
+            background: var(--accent);
+            box-shadow: 0 1px 8px rgba(60,60,60,0.07);
+        }
+        @media (max-width: 900px) {
+            .mac-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .mac-wrapper {
+                padding: 18px 6vw 32px 6vw;
+            }
+            .mac-header h1 {
+                font-size: 2.1rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .mac-intro audio {
+                width: 98vw;
+            }
+            .mac-wrapper {
+                padding: 8px 2vw 18px 2vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mac-wrapper">
+        <header class="mac-header">
+            <h1>Podcast Salomon</h1>
+            <h2>Contenido digital, inspiración y música</h2>
+        </header>
+        <main>
+            <section class="mac-intro">
+                <p>Salomon tiene que grabar su podcast de creador de contenido digital de la semana pero está afónico y no tiene voz, por lo que esta semana no habrá nuevo episodio.</p>
+                <audio controls>
+                    <source src="salomonpodcast.mp3" type="audio/mpeg">
+                    Tu navegador no soporta audio.
+                </audio>
+            </section>
+            <section class="mac-videos">
+                <div class="mac-grid">
+                    <div class="mac-item">
+                        <div class="mac-title">Don´t Worry de Lumine</div>
+                        <iframe src="https://www.youtube.com/embed/sPLD_TonU2U?si=P8kcYJM80yLEcGWP" title="Don´t Worry de Lumine" allowfullscreen></iframe>
+                    </div>
+                    <div class="mac-item">
+                        <div class="mac-title">Who Loves the Sun</div>
+                        <iframe src="https://www.youtube.com/embed/3sONSUu16bM?si=qBU6-3k_RFFBGoU5" title="Who Loves the Sun" allowfullscreen></iframe>
+                    </div>
+                    <div class="mac-item">
+                        <div class="mac-title">Innerbloom</div>
+                        <iframe src="https://www.youtube.com/embed/Tx9zMFodNtA?si=GMRhzeRFpTKdwQUe" title="Innerbloom" allowfullscreen></iframe>
+                    </div>
+                    <div class="mac-item">
+                        <div class="mac-title">James Hype</div>
+                        <iframe src="https://www.youtube.com/embed/SWxGkhrT0yc?si=oeYB4-G2CM3Z8zJK" title="James Hype" allowfullscreen></iframe>
+                    </div>
+                    <div class="mac-item">
+                        <div class="mac-title">Productividad</div>
+                        <iframe src="https://www.youtube.com/embed/rwCDv1dcue4?si=kGYOVwiewiHRmW6E" title="Productividad" allowfullscreen></iframe>
+                    </div>
+                    <div class="mac-item">
+                        <div class="mac-title">Herramientas digitales</div>
+                        <iframe src="https://www.youtube.com/embed/1EVeFp-oKZg?si=uTVX41ppYI4hByhK" title="Herramientas digitales" allowfullscreen></iframe>
+                    </div>
+                    <div class="mac-item">
+                        <div class="mac-title">Coldplay - Viva La Vida</div>
+                        <iframe src="https://www.youtube.com/embed/dvgZkm1xWPE" title="Coldplay - Viva La Vida" allowfullscreen></iframe>
+                    </div>
+                    <div class="mac-item">
+                        <div class="mac-title">Ed Sheeran - Shape of You</div>
+                        <iframe src="https://www.youtube.com/embed/JGwWNGJdvx8" title="Ed Sheeran - Shape of You" allowfullscreen></iframe>
+                    </div>
+                    <div class="mac-item">
+                        <div class="mac-title">Dua Lipa - Levitating</div>
+                        <iframe src="https://www.youtube.com/embed/TUVcZfQe-Kw" title="Dua Lipa - Levitating" allowfullscreen></iframe>
+                    </div>
+                    <div class="mac-item">
+                        <div class="mac-title">The Weeknd - Blinding Lights</div>
+                        <iframe src="https://www.youtube.com/embed/fHI8X4OXluQ" title="The Weeknd - Blinding Lights" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
