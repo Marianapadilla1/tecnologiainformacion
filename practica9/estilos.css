@@ -1,0 +1,21 @@
+body { 
+   
+background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+   font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+   color: white;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+}
+
+h1 {
+    font-size: larger;
+     font-family: "Epunda Slab", serif;
+}
+
+h1, h2, h3 {
+   margin: 0;
+   padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
