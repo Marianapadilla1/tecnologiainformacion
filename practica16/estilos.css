@@ -1,0 +1,132 @@
+
+body {
+    background-color: #141414;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #e50914;
+    margin-top: 20px;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-shadow: 0 4px 24px #e50914, 0 2px 8px #000;
+    transition: font-size 0.3s, text-shadow 0.3s;
+}
+
+/* Reduce h1 size when hovering any .item */
+.item:hover ~ h1,
+.item:focus ~ h1 {
+    font-size: 2rem;
+    text-shadow: 0 2px 8px #e50914, 0 1px 4px #000;
+}
+
+.header {
+    background: #181818;
+    color: #e50914;
+    padding: 20px 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.item {
+    background-color: #222;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    min-height: 280px;
+    box-shadow: none;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.item::after {
+    content: "ver";
+    display: block;
+    position: absolute;
+    left: 50%;
+        bottom: -32px; /* sube el botón para que se vea más */
+        transform: translateX(-50%);
+        background: #fff;
+        color: #e50914;
+        font-weight: 700;
+        font-size: 1.3rem; /* más grande */
+        padding: 12px 32px; /* más grande */
+        border-radius: 28px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.28); /* sombra más notoria */
+        opacity: 0.9; /* más visible incluso antes del hover */
+        pointer-events: none;
+        transition: opacity 0.3s, bottom 0.3s, box-shadow 0.3s;
+        letter-spacing: 1.5px;
+        z-index: 10;
+    }
+
+    .item:hover::after,
+    .item:focus::after {
+        opacity: 1;
+        bottom: -12px; /* sube aún más en hover */
+        box-shadow: 0 10px 32px rgba(229,9,20,0.28), 0 4px 12px rgba(0,0,0,0.28); /* sombra roja y negra */
+        pointer-events: auto;
+    }
+
+.item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 4px #e50914;
+    z-index: 2;
+}
+
+.item span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(20,20,20,0.8);
+    color: #fff;
+    padding: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9 {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 4px;
+    min-height: 280px;
+}
+
+
+.item1 { grid-column: 1/2; grid-row: 1/2; background-image: url('https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg'); }
+.item2 { grid-column: 2/3; grid-row: 1/2; background-image: url('https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SY679_.jpg'); }
+.item3 { grid-column: 3/4; grid-row: 1/2; background-image: url('https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg'); }
+.item4 { grid-column: 4/5; grid-row: 1/2; background-image: url('https://upload.wikimedia.org/wikipedia/en/3/3d/The_Lion_King_poster.jpg'); }
+.item5 { grid-column: 5/6; grid-row: 1/2; background-image: url('https://m.media-amazon.com/images/I/81ExhpBEbHL._AC_SY679_.jpg'); } 
+.item6 { grid-column: 1/2; grid-row: 2/3; background-image: url('https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg'); } 
+.item7 { grid-column: 2/3; grid-row: 2/3; background-image: url('https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg'); } 
+.item8 { grid-column: 3/4; grid-row: 2/3; background-image: url('https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SY679_.jpg'); }
+.item9 { grid-column: 4/6; grid-row: 2/3; background-image: url('https://upload.wikimedia.org/wikipedia/en/1/17/Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg'); }
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+    .item { min-height: 180px; }
+}
